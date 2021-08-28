@@ -20,29 +20,31 @@ const typeDefs = gql`
   }
 `;
 
+const users = [
+  {
+    _id: String(Math.random()),
+    name: 'Samu',
+    email: 'samu@gmail.com',
+    active: true
+  },
+  {
+    _id: String(Math.random()),
+    name: 'Samu2',
+    email: 'samu2@gmail.com',
+    active: false
+  },
+  {
+    _id: String(Math.random()),
+    name: 'Samu3',
+    email: 'samu3@gmail.com',
+    active: true
+  },
+]
+
 const resolvers = {
   Query: {
     hello: () => "Hello World",
-    users: () => [
-      {
-        _id: String(Math.random()),
-        name: 'Samu',
-        email: 'samu@gmail.com',
-        active: true
-      },
-      {
-        _id: String(Math.random()),
-        name: 'Samu2',
-        email: 'samu2@gmail.com',
-        active: false
-      },
-      {
-        _id: String(Math.random()),
-        name: 'Samu3',
-        email: 'samu3@gmail.com',
-        active: true
-      },
-    ]
+    users: () => users
   }
 };
 
