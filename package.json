@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://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@github.com/Samuel-Ricardo/GetStarted-GraphQL.git",
   "author": "Samuel_Ricardo <samuelricardoofficial@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^3.3.0",
+    "graphql": "^15.5.1"
+  }
 }
