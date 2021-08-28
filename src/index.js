@@ -17,6 +17,7 @@ const typeDefs = gql`
   type Query {
     hello: String
     users: [User!]!
+    getUserByEmail(email: String): User!
   }
 `;
 
@@ -44,7 +45,10 @@ const users = [
 const resolvers = {
   Query: {
     hello: () => "Hello World",
-    users: () => users
+    users: () => users,
+    getUserByEmail: (_, args) => {
+      return users.find((user) => user.email === args.email);
+    }
   }
 };
 
