@@ -22,8 +22,27 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    hello: () => "Hello World"
-    
+    hello: () => "Hello World",
+    users: () => [
+      {
+        _id: String(Math.random()),
+        name: 'Samu',
+        email: 'samu@gmail.com',
+        active: true
+      },
+      {
+        _id: String(Math.random()),
+        name: 'Samu2',
+        email: 'samu2@gmail.com',
+        active: false
+      },
+      {
+        _id: String(Math.random()),
+        name: 'Samu3',
+        email: 'samu3@gmail.com',
+        active: true
+      },
+    ]
   }
 };
 
@@ -33,4 +52,4 @@ server.listen().then( ({url}) => console.log(`Server Started on ${url}`))
 
 // Start gql server and open playground
 //
-// gql node src/index.js
+// node src/index.js
