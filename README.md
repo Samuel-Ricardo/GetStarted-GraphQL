@@ -10,6 +10,8 @@
 
 ## Details:
 
+- Apollo Server
+
 - Query
 - Mutation
 
